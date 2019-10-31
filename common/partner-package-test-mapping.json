@@ -1,0 +1,57 @@
+{
+  "name": "partner_package_test_mapping",
+  "plural": "partner_package_test_mappings",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "partner_id": {
+      "type": "number",
+      "required": true
+    },
+    "package_id": {
+      "type": "number"
+    },
+    "test_id": {
+      "type": "number",
+      "required": true
+    },
+    "test_order": {
+      "type": "number",
+      "required": true
+    },
+    "created_date": {
+      "type": "date",
+      "required": true
+    },
+    "created_by": {
+      "type": "number",
+      "required": true
+    },
+    "last_modified_date": {
+      "type": "date",
+      "required": true
+    },
+    "last_modified_by": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "partnerPackage_rel": {
+      "type": "hasMany",
+      "model": "partner_package",
+      "foreignKey": "package_id"
+    },
+    "partnerTest_rel": {
+      "type": "belongsTo",
+      "model": "partner_test",
+      "foreignKey": "test_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

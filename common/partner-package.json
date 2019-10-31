@@ -1,0 +1,62 @@
+{
+  "name": "partner_package",
+  "plural": "partner_packages",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "partner_id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "String",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": true
+    },
+    "status": {
+      "type": "Boolean",
+      "required": true
+    },
+    "addendum_image": {
+      "type": "String"
+    },
+    "created_date": {
+      "type": "date",
+      "required": true
+    },
+    "created_by": {
+      "type": "number",
+      "required": true
+    },
+    "last_modified_date": {
+      "type": "date",
+      "required": true
+    },
+    "last_modified_by": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "partnerPackageTestMappings": {
+      "type": "hasMany",
+      "model": "partner_package_test_mapping",
+      "foreignKey": "package_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

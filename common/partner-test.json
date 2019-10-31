@@ -1,0 +1,80 @@
+{
+  "name": "partner_test",
+  "plural": "partner_tests",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "partner_id": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": true
+    },
+    "status": {
+      "type": "Boolean",
+      "required": true
+    },
+    "sample": {
+      "type": "number",
+      "required": true
+    },
+    "isExternal": {
+      "type": "Boolean",
+      "required": true
+    },
+    "Dependent_Test_Flag": {
+      "type": "Boolean",
+      "required": true
+    },
+    "Addendum_Details_1": {
+      "type": "string",
+      "required": true
+    },
+    "Addendum_Details_2": {
+      "type": "string",
+      "required": true
+    },
+    "created_date": {
+      "type": "date",
+      "required": true
+    },
+    "created_by": {
+      "type": "number",
+      "required": true
+    },
+    "last_modified_date": {
+      "type": "date",
+      "required": true
+    },
+    "last_modified_by": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "masterCategoryValues": {
+      "type": "belongsTo",
+      "model": "master_category_values",
+      "foreignKey": "sample",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

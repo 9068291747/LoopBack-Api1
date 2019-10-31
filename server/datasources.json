@@ -1,0 +1,16 @@
+{
+  "db1": {
+    "name": "db1",
+    "connector": "memory"
+  },
+  "db": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "angular",
+    "password": "jaisurya",
+    "name": "db",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

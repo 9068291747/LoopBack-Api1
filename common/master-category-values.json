@@ -1,0 +1,57 @@
+{
+  "name": "master_category_values",
+  "plural": "master_category_valuess",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "category_id": {
+      "type": "number",
+      "required": true
+    },
+    "partner_id": {
+      "type": "number"
+    },
+    "category_short_name": {
+      "type": "string",
+      "required": true
+    },
+    "category_value": {
+      "type": "string"
+    },
+    "active_flag": {
+      "type": "string"
+    },
+    "created_date": {
+      "type": "date",
+      "required": true
+    },
+    "created_by": {
+      "type": "number",
+      "required": true
+    },
+    "last_modified_date": {
+      "type": "date",
+      "required": true
+    },
+    "last_modified_by": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "partnerTests": {
+      "type": "hasMany",
+      "model": "partner_test",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "info": {
+    "dataSource": "db",
+    "public": true
+},
+"master_category_values": {
+  "dataSource": "db",
+  "public": true
+},
+"partner_package": {
+  "dataSource": "db",
+  "public": true
+},
+"partner_package_test_mapping": {
+  "dataSource": "db",
+  "public": true
+},
+"partner_test": {
+  "dataSource": "db",
+  "public": true
+}
+}
